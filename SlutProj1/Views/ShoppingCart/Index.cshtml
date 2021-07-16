@@ -1,0 +1,37 @@
+﻿@model  SlutProj1.Views.ShoppingCartViewModel
+
+<h4>These are your T-shirts</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Selected amount</th>
+            <th>T-shirt</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+        </tr>
+        <h2>Your shopping cart</h2>
+
+    </thead>
+    <tbody>
+        @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+        {
+            <tr>
+                <td class="text-center">@line.Amount</td>
+                <td class="text-left">@line.Tshirt.Size</td>
+                <td class="text-right">@line.Tshirt.Price.ToString("c")</td>
+                <td class="text-right">
+                    @((line.Amount * line.Tshirt.Price).ToString("c"))
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @Model.ShoppingCartTotal.ToString("c")
+            </td>
+        </tr>
+    </tfoot>
+</table>
+

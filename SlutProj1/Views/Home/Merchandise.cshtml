@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Merchandise";
+
+    @model Tshirt
+
+   
+
+    <div class="thumbnail">
+        <img alt="" src="~/css/Images/Merch/T_shirt.jpg" />
+        <div class="caption-full">
+            <h3 class="pull-right">Price -:180</h3>
+            <h3>
+                <!-- <a href="#">Size</a>-->
+            </h3>
+            <h4>Unisex</h4>
+
+            <div class="addToCart">
+                <p class="button">
+                    <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+                       asp-route-tshirtId="TshirtID">Add to cart</a>
+                </p>
+            </div>
+        </div>
+    </div>
+}
+<!--<tr>
+    <td><br /></td>
+</tr>
+
+
+
+<div>
+    <center> <img src="~/css/Images/Merch/T_shirt.jpg" /></center>
+    <tr>
+        <td><br /></td>
+    </tr>
+    <center><a><h3> Unisex T-shirt  180 :-</h3></a></center>
+
+    <center>
+        <select name="mydropdown">
+            <option value="Large">L</option>
+            <option value="XtraLarge">XL</option>
+            <option value="XXLArge">XXL</option>
+        </select>
+    </center>
+
+    </div>
+    <tr>
+        <td><br /></td>
+    </tr>
+
+    <center><button onclick="">Add to cart</button></center>-->
